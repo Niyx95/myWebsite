@@ -13,3 +13,13 @@ creation of my website
 - logo by freelancer on fiverr
 - polished and redesigned page
 
+### Phase3 -- setting up Pi
+- installed and reconfigured unattened pachages
+- installed apache2 webserver
+- configured apache2 server on port 8080 due conflict with Nextcloud port
+- cloned myWebsite repo into /var/www/html
+- installed cloudflared tunnel and setup of DNS records
+- setting up of CNAME record, https:// and www.
+
+### Phase4 -- writing curlable page
+
