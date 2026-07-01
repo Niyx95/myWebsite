@@ -22,4 +22,6 @@ creation of my website
 - setting up of CNAME record, https:// and www.
 
 ### Phase4 -- writing curlable page
-
+- installed Flask via pip3
+- wrote app.py with ANSI escape code
+- testing curl on locahost 
