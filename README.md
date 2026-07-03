@@ -19,7 +19,7 @@ creation of my website
 - configured apache2 server on port 8080 due conflict with Nextcloud port
 - cloned myWebsite repo into /var/www/html
 - installed cloudflared tunnel and setup of DNS records
-- setting up of CNAME record, https:// and www.
+- set up CNAME record
 
 ### Phase4 -- writing curlable page
 - installed Flask via pip3
