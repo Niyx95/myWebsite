@@ -7,18 +7,17 @@ app = Flask(__name__)
 #ANSI Escape color codes
 reset="\033[0m"
 bold="\033[1m"
+black="\033[38;5;16m"
 red="\033[38;5;196m"
 purple="\033[38;5;93m"
 white="\033[38;5;15m"
 
 
 #curl response in ANSI code
-curl_response = f"""
+main_page = f"""
 {red}
  ███╗   ██╗██╗   ██╗██╗  ██╗██████╗ ██╗  ██╗
  ████╗  ██║╚██╗ ██╔╝╚██╗██╔╝╚════██╗██║ ██╔╝
- #{reset}
- #{white}
  ██╔██╗ ██║ ╚████╔╝  ╚███╔╝  █████╔╝█████╔╝ 
  ██║╚██╗██║  ╚██╔╝   ██╔██╗ ██╔═══╝ ██╔═██╗ 
  ██║ ╚████║   ██║   ██╔╝ ██╗███████╗██║  ██╗
@@ -30,7 +29,7 @@ curl_response = f"""
 {purple}--------------------------------------{reset}
 
 {white}
-Hy I'm Nikolas'
+Hi I'm Nikolas'
 
 I'm 31 years old, from the Dolomites in Italy.
 
@@ -41,8 +40,7 @@ After a decade in it, i decided to shift my life.
 Studying solo in my free time, i developed a strong passion 
 for networking, Linux and systems administration.
 I've built several IoT devices, few gaming PC, a self-hosted 
-Linux server on a Raspberry Pi 5,
-learning something new everday.
+Linux server on a Raspberry Pi 5, 
 
 I will bring strong teamwork ability, flexibility, determination,
 and a happy face is always included.
@@ -60,12 +58,13 @@ Check out my GitHub account to see what iv`e build so far.
 
 """
 
+
 @app.route('/')
 def index():
     user_agent = request.headers.get('User-Agent', '')
     if 'curl' in user_agent:
-        return curl_response, 200, {'Content-Type': 'text/plain; charset=utf-8'}
+        return main_page, 200, {'Content-Type': 'text/plain; charset=utf-8'}
     return send_file('~/Documents/MyDir/github_repos/myWebsite/index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=8080, debug=False)
