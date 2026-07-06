@@ -21,4 +21,12 @@ creation of my website
 - installed cloudflared tunnel and setup of DNS records
 - set up CNAME record
 
+### Phase4 -- final settings
+- redesign of file structure
+- final code corrdction
+- everything up and online
 
+## Issues
+** At the first i thought to go with apache2 and i did actually. later on when started to write the curl 
+i figured out i could have done all by using Flask, so i redesigned everything. Using Cloudflares was 
+also a challange, i learned a lot about networking and DNS record especially. **

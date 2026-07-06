@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nyx2k</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <img src="assets/mylogo1.jpg" alt="logo">
+	    <img src="{{ url_for('static', filename='images/mylogo1.jpg')}}">
         <div class="tagline"> Networking // Linux // sysadmin </div>
     </header>
 
@@ -55,7 +55,7 @@
             </pre>
             </div>
             <div class="window-photo">
-                <img src="assets/me.jpg" alt="Nikolas">
+		    <img src="{{ url_for('static', filename='images/me.jpg')}}">
             </div>
         </div>
     </section>

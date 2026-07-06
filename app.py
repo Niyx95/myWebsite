@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, render_template
 
 
 #create Object
@@ -64,7 +64,7 @@ def index():
     user_agent = request.headers.get('User-Agent', '')
     if 'curl' in user_agent:
         return main_page, 200, {'Content-Type': 'text/plain; charset=utf-8'}
-    return send_file('~/Documents/MyDir/github_repos/myWebsite/index.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=False)
